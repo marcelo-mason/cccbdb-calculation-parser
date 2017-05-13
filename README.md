@@ -20,4 +20,8 @@ Pulls all geometry information from cccbdb.nist.gov for the specified chemical f
 
 * The script will run through extracting all geometries, outputting status to the console.  It will create a text file with all the geometries for the formula in your current path. i.e. CH4.txt
 
+# Screenshots
 
+![Console](screenshots/console.jpg)
+
+![output](screenshots/output.jpg)
