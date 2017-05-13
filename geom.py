@@ -58,7 +58,7 @@ def run(formula):
     e_results = extract.complex(effective)
 
     # create file
-    file = open(os.getcwd() + formula + '.txt', 'w')
+    file = open(os.path.join(os.getcwd(), formula + '.txt'), 'w')
 
     # for each link in data
     for result in (p_results + s_results + e_results):
