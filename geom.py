@@ -2,6 +2,7 @@ import sys
 import os
 import requests
 import extract
+import writer
 from bs4 import BeautifulSoup
 
 
@@ -42,7 +43,7 @@ def run(formula):
     session = requests.Session()
     res = session.post(URLS['form'], data=data, headers=HEADERS, allow_redirects=False)
 
-    # follow the redirect using same session cookie
+    # follow the redirect
     if res.status_code == 302:
         res2 = session.get(URLS['geom2'])
 
@@ -69,21 +70,11 @@ def run(formula):
             soup = BeautifulSoup(res4.content, 'html.parser')
             codes = soup.find('textarea').text
 
-            # remove blank lines
-            clean_codes = os.linesep.join([s for s in codes.splitlines() if s.strip()])
-
             # write to file
-            file.write(result['level'] + '\n')
-            if 'basis' in result:
-                file.write(result['basis'] + '\n')
-            file.write(result['bond'] + '\n')
-            file.write(clean_codes + '\n')
-            file.write('-------------------------------------------\n')
-            result.pop('url', None)
-            print(str(result))
-        except Exception as e:
-            result.pop('url', None)
-            print('failed: ' + str(result))
+            writer.file(file, result, codes)
+            writer.console(result)
+        except:
+            writer.console(result, True)
 
     file.close()
 
