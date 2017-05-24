@@ -14,11 +14,20 @@ Pulls all geometry and dipole information from cccbdb.nist.gov for the specified
 
 `python setup.py develop`
 
-* Run the script by supplying either geom or dipole and a formula
+* Run the script by supplying the following command line arguments
 
-`python cccbdb.py geom CH4`
+`Syntax: python cccbdb.py [method] [formula] [deep/shallow]`
 
-* The script will run through extracting all geometries, outputting status to the console.  It will create a text file with all the geometries for the formula in your current path. i.e. CH4.txt
+**The method you get from the ccbdb url**  
+i.e. the method for this url *http://cccbdb.nist.gov/polcalc1x.asp* is "polcalc"
+
+*Examples:*
+
+`python cccbdb.py geom CH4 deep`
+
+`python cccbdb.py dipole CH4 shallow`
+
+* The script will run through extracting the data and outputting status to the console.  It will create a text file in your current path with the output.
 
 # Screenshots
 
