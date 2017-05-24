@@ -2,27 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "dipole",
-      "type": "python",
-      "request": "launch",
-      "stopOnEntry": false,
-      "pythonPath": "${config:python.pythonPath}",
-      "program": "${workspaceRoot}/cccbdb.py",
-      "cwd": "${workspaceRoot}",
-      "env": {},
-      "args": [
-        "dipole",
-        "CH4"
-      ],
-      "envFile": "${workspaceRoot}/.env",
-      "debugOptions": [
-        "WaitOnAbnormalExit",
-        "WaitOnNormalExit",
-        "RedirectOutput"
-      ]
-    },
-    {
-      "name": "geom",
+      "name": "shallow",
       "type": "python",
       "request": "launch",
       "stopOnEntry": false,
@@ -33,6 +13,27 @@
       "args": [
         "geom",
         "CH4"
+      ],
+      "envFile": "${workspaceRoot}/.env",
+      "debugOptions": [
+        "WaitOnAbnormalExit",
+        "WaitOnNormalExit",
+        "RedirectOutput"
+      ]
+    },
+    {
+      "name": "deep",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "pythonPath": "${config:python.pythonPath}",
+      "program": "${workspaceRoot}/cccbdb.py",
+      "cwd": "${workspaceRoot}",
+      "env": {},
+      "args": [
+        "geom",
+        "CH4",
+        "deep"
       ],
       "envFile": "${workspaceRoot}/.env",
       "debugOptions": [

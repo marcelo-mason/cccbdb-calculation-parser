@@ -35,7 +35,7 @@ def run(calculation, formula, depth='shallow'):
     e_results = extract.complex(effective)
 
     # create file
-    file = open(os.path.join(os.getcwd(), formula + '.' + calculation + '.txt'), 'w')
+    file = open(os.path.join(os.getcwd(), formula + '.' + calculation + '.' + depth + '.txt'), 'w')
 
     # for each link in data
     if depth == 'deep':
