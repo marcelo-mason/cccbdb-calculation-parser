@@ -1,4 +1,4 @@
-from parser import HTMLTableParser
+from table_parser import HTMLTableParser
 
 
 def simple(list):
