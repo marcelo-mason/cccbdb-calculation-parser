@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # command line args
     calculation = sys.argv[1]
     formula = sys.argv[2]
-    depth = sys.argv[2]
+    depth = sys.argv[3]
 
     # run the parser
     runner.run(calculation, formula, depth)
