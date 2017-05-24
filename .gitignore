@@ -5,5 +5,3 @@ __pycache__/
 
 # output files
 *.txt
-
-.vscode

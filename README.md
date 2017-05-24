@@ -1,6 +1,6 @@
 # cccbdb.nist.gov Geometry Parser
 
-Pulls all geometry information from cccbdb.nist.gov for the specified chemical formula
+Pulls all geometry and dipole information from cccbdb.nist.gov for the specified chemical formula
 
 ## Setup
 
@@ -14,9 +14,9 @@ Pulls all geometry information from cccbdb.nist.gov for the specified chemical f
 
 `python setup.py develop`
 
-* Run the script by supplying a formula
+* Run the script by supplying either geom or dipole and a formula
 
-`python geom.py CH4`
+`python cccbdb.py geom CH4`
 
 * The script will run through extracting all geometries, outputting status to the console.  It will create a text file with all the geometries for the formula in your current path. i.e. CH4.txt
 

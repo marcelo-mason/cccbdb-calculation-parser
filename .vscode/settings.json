@@ -1,0 +1,9 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "python.formatting.provider": "autopep8",
+  "python.linting.pylintEnabled": false,
+  "python.linting.pep8Enabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length=500"],
+   "editor.tabSize": 4,
+}

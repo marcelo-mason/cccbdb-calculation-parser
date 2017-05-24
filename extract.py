@@ -20,6 +20,7 @@ def complex(list):
     p = HTMLTableParser()
     p.feed(str(list))
     headers = p.tables[0][0]
+    # remove first 2 blank columns from header row
     del headers[0]
     del headers[0]
     for row in p.tables[0]:
@@ -37,4 +38,3 @@ def complex(list):
                     }
                     results.append(detail)
     return results
-

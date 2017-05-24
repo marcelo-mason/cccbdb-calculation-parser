@@ -15,6 +15,16 @@ def file(file, result, codes):
     file.flush()
 
 
+def file_shallow(file, result):
+    # write code to file
+
+    if 'basis' in result:
+        file.write("%s / %s : %s \n" % (result['level'], result['basis'], result['bond']))
+    else:
+        file.write("%s : %s \n" % (result['level'], result['bond']))
+    file.flush()
+
+
 def console(result, failed=False):
     result.pop('url', None)
     if failed:
