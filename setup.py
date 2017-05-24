@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='cccbdb-geometry-parser',
+    name='cccbdb-calculation-parser',
     version='1.0',
     description=(
-        'Pulls all geometry information from cccbdb.nist.gov for the specified chemical formula'),
+        'Pulls all calculation information from cccbdb.nist.gov for the specified chemical formula'),
     author='Ben',
     install_requires=[
         'beautifulsoup4==4.4.1',
