@@ -6,14 +6,14 @@ import constant
 from bs4 import BeautifulSoup
 
 
-def run(method, formula, depth='shallow'):
+def run(calculation, formula, depth='shallow'):
     data = {
         'formula': formula,
         'submit1': 'Submit'
     }
 
-    url1 = 'http://cccbdb.nist.gov/%s1x.asp' % method
-    url2 = 'http://cccbdb.nist.gov/%s2x.asp' % method
+    url1 = 'http://cccbdb.nist.gov/%s1x.asp' % calculation
+    url2 = 'http://cccbdb.nist.gov/%s2x.asp' % calculation
 
     # request initial url
     session = requests.Session()
@@ -35,7 +35,7 @@ def run(method, formula, depth='shallow'):
     e_results = extract.complex(effective)
 
     # create file
-    file = open(os.path.join(os.getcwd(), formula + '.' + method + '.txt'), 'w')
+    file = open(os.path.join(os.getcwd(), formula + '.' + calculation + '.txt'), 'w')
 
     # for each link in data
     if depth == 'deep':

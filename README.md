@@ -1,6 +1,6 @@
-# cccbdb.nist.gov Geometry Parser
+# cccbdb.nist.gov Calculation Parser
 
-Pulls all geometry and dipole information from cccbdb.nist.gov for the specified chemical formula
+Pulls all calculatione information from cccbdb.nist.gov for the specified chemical formula
 
 ## Setup
 
@@ -16,16 +16,18 @@ Pulls all geometry and dipole information from cccbdb.nist.gov for the specified
 
 * Run the script by supplying the following command line arguments
 
-`Syntax: python cccbdb.py [method] [formula] [deep/shallow]`
+`Syntax: python cccbdb.py [calculation] [formula] [deep/shallow]`
 
-**The method you get from the ccbdb url**  
-i.e. the method for this url *http://cccbdb.nist.gov/polcalc1x.asp* is "polcalc"
+**The calculation name you get from the ccbdb url**  
+i.e. the calculation name for this url *http://cccbdb.nist.gov/polcalc1x.asp* is "polcalc"
 
 *Examples:*
 
 `python cccbdb.py geom CH4 deep`
 
 `python cccbdb.py dipole CH4 shallow`
+
+Deep will go into the bond and pull out the components, shallow will not.
 
 * The script will run through extracting the data and outputting status to the console.  It will create a text file in your current path with the output.
 
