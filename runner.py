@@ -3,6 +3,7 @@ import requests
 import extract
 import writer
 import constant
+import sys
 from bs4 import BeautifulSoup
 
 
@@ -35,7 +36,10 @@ def run(calculation, formula, depth='shallow'):
             p_results = extract.simple(predefined)
             s_results = extract.complex(standard)
             e_results = extract.complex(effective)
+        except KeyboardInterrupt:
+            sys.exit()
         except:
+            print('**** Failed, retrying...')
             continue
         break
 
@@ -55,7 +59,10 @@ def run(calculation, formula, depth='shallow'):
 
                     writer.file(file, result, codes)
                     writer.console(result)
+                except KeyboardInterrupt:
+                    sys.exit()
                 except:
+                    print('**** Failed, retrying...')
                     continue
                 break
     else:
