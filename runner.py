@@ -18,13 +18,19 @@ def run(calculation, formula, depth='shallow'):
 
     while True:
         try:
+            print('**** Posting formula')
+
             # request initial url
             session = requests.Session()
             res = session.post(constant.URLS['form'], data=data, headers=constant.headers(url1), allow_redirects=False)
 
+            print('**** Fetching data')
+
             # follow the redirect
             if res.status_code == 302:
                 res2 = session.get(url2)
+
+            print('**** Extracting data')
 
             # find tables
             soup = BeautifulSoup(res2.content, 'html.parser')
@@ -48,6 +54,8 @@ def run(calculation, formula, depth='shallow'):
 
     # for each link in data
     if depth == 'deep':
+        print('**** Fetching deep data')
+
         for result in (p_results + s_results + e_results):
             while True:
                 try:
