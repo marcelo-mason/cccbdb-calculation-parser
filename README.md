@@ -8,7 +8,7 @@ Pulls all calculatione information from cccbdb.nist.gov for the specified chemic
 
 * Clone the repo to your machine
 
-`git clone git@github.com:marcelo-mason/cccbdb-geometry-parser.git && cd cccbdb-geometry-parser`
+`git clone git@github.com:marcelo-mason/cccbdb-calculation-parser.git && cd cccbdb-calculation-parser`
 
 * Install script dependencies
 
