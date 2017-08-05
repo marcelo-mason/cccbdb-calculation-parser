@@ -1,6 +1,6 @@
 # cccbdb.nist.gov Calculation Parser
 
-Pulls all calculatione information from cccbdb.nist.gov for the specified chemical formula
+Pulls all calculation information from cccbdb.nist.gov for the specified chemical formula
 
 ## Setup
 
