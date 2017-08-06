@@ -1,6 +1,7 @@
 URLS = {
     'form': 'http://cccbdb.nist.gov/getformx.asp',
     'dump': 'http://cccbdb.nist.gov/carttabdumpx.asp',
+    'dump2': 'http://cccbdb.nist.gov/tabdumpx.asp',
 }
 
 

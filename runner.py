@@ -62,6 +62,11 @@ def run(calculation, formula, depth='shallow'):
                     # pull codes
                     session.get(result['url'])
                     res4 = session.post(constant.URLS['dump'])
+
+                    # try alternate dump url
+                    if res4.status_code == 500:
+                        res4 = session.post(constant.URLS['dump2'])
+
                     soup = BeautifulSoup(res4.content, 'html.parser')
                     codes = soup.find('textarea').text
 
